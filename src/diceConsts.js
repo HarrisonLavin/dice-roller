@@ -1,19 +1,19 @@
 export const  threat="TH";
- export const  failure="FA";
- export const  despair="DR";
- export const  success="SU";
- export const  triumph="TR";
- export const  advantage="AD";
- export const  blank=" ";
- export const  setback="S";
- export const  difficulty="D";
- export const  challenge="C";
- export const  boost="B";
- export const  ability="A";
- export const  proficiency="P";
- export const  force="F";
- export const  lightSide="LS";
- export const  darkSide="DS";
+export const  failure="FA";
+export const  despair="DR";
+export const  success="SU";
+export const  triumph="TR";
+export const  advantage="AD";
+export const  blank=" ";
+export const  setback="S";
+export const  difficulty="D";
+export const  challenge="C";
+export const  boost="B";
+export const  ability="A";
+export const  proficiency="P";
+export const  force="F";
+export const  lightSide="LS";
+export const  darkSide="DS";
 
      
 export const proficiencyDie = [
@@ -100,8 +100,6 @@ export const challengeDie=[
     `${darkSide}`,
     `${darkSide}` 
 ]
-
-
 
 export const listOfDice = {
     P: proficiencyDie,
