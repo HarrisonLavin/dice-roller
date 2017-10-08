@@ -1,24 +1,12 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import * as diceConsts from './diceConsts'
-import {rollDie, listOfDice} from './diceConsts'
+import * as diceConsts from './components/dieComponents/diceConsts'
+import {listOfDice} from './components/dieComponents/diceConsts'
+import {rollTheDice} from './components/dieComponents/dieRoller'
 
 class App extends Component {
   
-  rollTheDice(numberOfDice,typeOfDie){
-    if(typeOfDie in listOfDice){
-      let results = []
-      if(numberOfDice > 0){
-        results.push(typeOfDie[Math.floor(Math.random()*typeOfDie.length)])
-        rollTheDice(numberOfDice - 1, typeOfDie)
-      } else {
-        return results;
-      }
-    } else{
-      console.log("Invalid die: " + type);
-    }  
-  }
 
   render() {
     console.log(diceConsts.dice)
