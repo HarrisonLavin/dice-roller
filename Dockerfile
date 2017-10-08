@@ -6,7 +6,7 @@ ENV APP_ENV $app_env
 
 RUN mkdir -p /dice-roller
 WORKDIR /dice-roller
-COPY ./dice-roller ./
+COPY ./ ./dice-roller
 
 RUN npm install
 
