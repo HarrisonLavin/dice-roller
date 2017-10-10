@@ -1,31 +1,42 @@
 import React, { Component } from 'react';
+import {rollTheDice} from '../dieRollerActions';
 
 class diceInput extends Component {
   
     constructor(){
         super()
-        this.state.value = "";
+        this.state = {
+            value: "",
+            results: ""
+        };
     }
 
 
-    handleTextEntry(){
-        
+    handleTextEntry = (event)=>{
+        let text = event.target.value;
+        this.setState({value: text})
+    }
+
+    onSubmit = () =>{
+        let rollResults;
+        this.setState({results: rollResults});
     }
 
 
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+     <div>
+        <p>AAAH</p>
+        <form onSubmit={this.onSubmit}>
+            <label> Number and type of Dice</label>
+            <br/>
+            <input type="text" onChange={this.handleTextEntry}/>
+            <input type="submit" value="Roll"/>
+        </form>
+        <p>{this.state.results}</p>
+     </div>
     );
   }
 }
 
-export default App;
+export default diceInput;
