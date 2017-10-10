@@ -18,7 +18,7 @@ class diceInput extends Component {
     }
 
     onSubmit = () =>{
-        let rollResults;
+        let rollResults="DICE ROLLED";
         this.setState({results: rollResults});
     }
 
@@ -27,13 +27,11 @@ class diceInput extends Component {
     return (
      <div>
         <p>AAAH</p>
-        <form onSubmit={this.onSubmit}>
             <label> Number and type of Dice</label>
             <br/>
             <input type="text" onChange={this.handleTextEntry}/>
-            <input type="submit" value="Roll"/>
-        </form>
-        <p>{this.state.results}</p>
+            <input type="button" value="Roll" onClick={this.onSubmit}/>
+        <p>{this.state.results} {this.state.value}</p>
      </div>
     );
   }
